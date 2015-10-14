@@ -53,9 +53,9 @@ def on_window_size(window, w, h):
 def initGL(window):
     gl.glClearColor(0.40,0.58,0.93,1.0) #cornflower blue
 
-    gl.glClearDepth(1.0); #Enables Clearing Of The Depth Buffer
-    gl.glDepthFunc(gl.GL_LESS); #The Type Of Depth Test To Do
-    gl.glEnable(gl.GL_DEPTH_TEST); #Enables Depth Testing
+    gl.glClearDepth(1.0) #Enables Clearing Of The Depth Buffer
+    gl.glDepthFunc(gl.GL_LESS) #The Type Of Depth Test To Do
+    gl.glEnable(gl.GL_DEPTH_TEST) #Enables Depth Testing
 
     gl.glShadeModel(gl.GL_SMOOTH) #Enables Smooth Color Shading
 
@@ -69,21 +69,15 @@ def display():
 
     gl.glBegin(gl.GL_TRIANGLES)
 
-    gl.glColor3f(1.0,0.0,0.0) #Set The Color To Red
     gl.glVertex3f( 0.0, 1.0, 0.0)
-
-    gl.glColor3f(0.0,1.0,0.0) #Set The Color To Green
     gl.glVertex3f(-1.0,-1.0, 0.0)
-
-    gl.glColor3f(0.0,0.0,1.0) #Set The Color To Blue
     gl.glVertex3f( 1.0,-1.0, 0.0)
 
-    gl.glEnd();
+    gl.glEnd()
 
     gl.glLoadIdentity()
     gl.glTranslatef(1.5,0.0,-6.0)
 
-    gl.glColor3f(0.5,0.5,1.0) #Set The Color To Blue
     gl.glBegin(gl.GL_QUADS)
     gl.glVertex3f(-1.0, 1.0, 0.0)
     gl.glVertex3f( 1.0, 1.0, 0.0)
