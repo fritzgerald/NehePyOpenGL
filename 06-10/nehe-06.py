@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import os
 import glfw
 import OpenGL.GL as gl
 import OpenGL.GLU as glu
@@ -58,7 +59,7 @@ def on_window_size(window, w, h):
 
 def LoadTextures():
     global texture
-    image = Image.open("NeHe.bmp")
+    image = Image.open(os.path.join("Data", "NeHe.bmp"))
     
     ix = image.size[0]
     iy = image.size[1]
